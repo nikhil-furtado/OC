@@ -1,11 +1,3 @@
-mkdir -p ~/assetbot && cd ~/assetbot
-
-cat > requirements.txt <<'REQ'
-python-telegram-bot==21.10
-requests==2.32.3
-REQ
-
-cat > assetbot.py <<'PY'
 import asyncio, json, os, re, time
 from telegram import Update
 from telegram.constants import ChatType
