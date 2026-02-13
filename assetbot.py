@@ -1,3 +1,4 @@
+cat > assetbot.py <<'PY'
 import asyncio, json, os, re, time
 from telegram import Update
 from telegram.constants import ChatType
