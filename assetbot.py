@@ -122,7 +122,7 @@ def envato_download(item_url: str, cookies_path: str, max_mb: int) -> Tuple[str,
         headers["Referer"] = f"https://app.envato.com/{item_type}/{item_uuid}"
         data = f"itemUuid={item_uuid}&itemType={item_type}"
         r = requests.post("https://app.envato.com/download.data", headers=headers, data=data, cookies=cookies, timeout=30)
-if r.status_code != 200:
+        if r.status_code != 200:
             continue
         m2 = re.search(r'"(https://[^\"]+envatousercontent\.com/[^\"]+)"', r.text)
         if m2:
@@ -214,4 +214,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-PY
+    PY
